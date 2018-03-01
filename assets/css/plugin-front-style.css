@@ -1,0 +1,98 @@
+/**
+ * Plugin Front Styles
+ */
+
+/* Spacing around table */
+table.offorders_order_table {
+	margin: 30px 0 30px 0;
+}
+
+/* Border for table columns */
+table.offorders_order_table td {
+	border-right: 1px solid #e1e1e1;
+}
+
+/* Welcome text */
+.offorders_customer_welcome_msg, .offorders_customer_logout {
+	text-align: center;
+}
+
+/* Login Form Styles */
+
+.offorders_customer_login_head {
+	text-align: center;
+}
+
+body.page form#loginform label {
+    display: block;
+}
+
+body.page form#loginform input[type=text], body.page form#loginform input[type=password] {
+    width: 100%;
+    margin: 0 0 15px;
+    padding: 13px 24px;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+    color: #383838;
+    background-color: transparent;
+    border: 1px solid #e1e1e1;
+    border-radius: 0;
+    outline: 0;
+    -webkit-appearance: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: border-color .2s ease-in-out;
+    -moz-transition: border-color .2s ease-in-out;
+    transition: border-color .2s ease-in-out;
+}
+
+body.page form#loginform {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    margin: 20px 0 35px 0;
+}
+
+@media only screen and (min-width: 801px) {
+    body.page form#loginform {
+        width: 50%;
+    }
+}
+
+body.page form#loginform input[type=submit] {
+    position: relative;
+    display: inline-block;
+    outline: 0;
+    padding: 13px 46px;
+    font-family: inherit;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    border-radius: 3em;
+    color: #fff;
+    background-color: #25abd1;
+    border: none;
+    cursor: pointer;
+    -webkit-transition: color .2s ease-in-out,background-color .2s ease-in-out,border-color .2s ease-in-out;
+    -moz-transition: color .2s ease-in-out,background-color .2s ease-in-out,border-color .2s ease-in-out;
+    transition: color .2s ease-in-out,background-color .2s ease-in-out,border-color .2s ease-in-out;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body.page form#loginform .login-submit {
+    text-align: center;
+}
+
+body.page form#loginform .login-remember {
+    text-align: center;
+}
+
+body.page form#loginform input[type=submit]:hover {
+    background-color: #383838;
+}
