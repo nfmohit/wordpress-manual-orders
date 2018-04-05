@@ -2,8 +2,8 @@
 /**
  * Execute the following code during plugin activation
  *
- * @since      1.0.0
- * @package    WordPress Offline Orders
+ * @since      0.0.1
+ * @package    WordPress Manual Orders
  * @author     Nahid Ferdous Mohit
  */
 
@@ -13,20 +13,18 @@
 
 // Customer
 add_role( 
-	'offorders_customer', 
-	'Customer', 
-	array( 
+	'wpmanualorders_customer',
+	__( 'Customer', 'wp-manual-orders' ),
+	array(
 		'read' => true,
-		'level_0' => true, 
 	) 
 );
 
 // Shop Administrator
 add_role(
-	'offorders_shop_admin',
-	'Shop Administrator',
+	'wpmanualorders_shop_admin',
+	__( 'Shop Administrator', 'wp-manual-orders' ),
 	array(
 		'read' => true,
-		'level_0' => 1,
 	)
 );

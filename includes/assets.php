@@ -2,19 +2,19 @@
 /**
  * Enqueue and handle assets
  *
- * @since      1.0.0
- * @package    WordPress Offline Orders
+ * @since      0.0.1
+ * @package    WordPress Manual Orders
  * @author     Nahid Ferdous Mohit
  */
 
 // Admin Assets
-function offorder_enqueue_admin_assets() {
+function wpmanualorders_enqueue_admin_assets() {
     wp_enqueue_style( 'plugin-admin-style',  plugin_dir_url(dirname(__FILE__)) . "assets/css/plugin-admin-style.css");
 }
-add_action( 'admin_print_styles', 'offorder_enqueue_admin_assets' );
+add_action( 'admin_print_styles', 'wpmanualorders_enqueue_admin_assets' );
 
 // Front-end Assets
-function offorder_enqueue_front_assets() {
+function wpmanualorders_enqueue_front_assets() {
     wp_enqueue_style( 'plugin-front-style',  plugin_dir_url(dirname(__FILE__)) . "assets/css/plugin-front-style.css");
 }
-add_action( 'wp_enqueue_scripts', 'offorder_enqueue_front_assets' );
+add_action( 'wp_enqueue_scripts', 'wpmanualorders_enqueue_front_assets' );

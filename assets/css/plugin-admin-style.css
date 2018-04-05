@@ -4,11 +4,11 @@
 
 /* Nicely format the fields in edit order screen */
 
-body.post-type-offorders_order #postbox-container-2 label {
+body.post-type-wpmanualorders_order #postbox-container-2 label {
 	min-width: 90px;
 	display: inline-block;
 }
 
-body.post-type-offorders_order #postbox-container-2 select, body.post-type-cp_order #postbox-container-2 input {
+body.post-type-wpmanualorders_order #postbox-container-2 select, body.post-type-cp_order #postbox-container-2 input {
 	width: 200px;
 }

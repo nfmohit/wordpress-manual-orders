@@ -1,1 +1,1 @@
-# wordpress-offline-orders
+# wordpress-manual-orders

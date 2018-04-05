@@ -3,23 +3,23 @@
  */
 
 /* Spacing around table */
-table.offorders_order_table {
+table.wpmanualorders_order_table {
 	margin: 30px 0 30px 0;
 }
 
 /* Border for table columns */
-table.offorders_order_table td {
+table.wpmanualorders_order_table td {
 	border-right: 1px solid #e1e1e1;
 }
 
 /* Welcome text */
-.offorders_customer_welcome_msg, .offorders_customer_logout {
+.wpmanualorders_customer_welcome_msg, .wpmanualorders_customer_logout {
 	text-align: center;
 }
 
 /* Login Form Styles */
 
-.offorders_customer_login_head {
+.wpmanualorders_customer_login_head {
 	text-align: center;
 }
 
