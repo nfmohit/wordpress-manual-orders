@@ -78,24 +78,33 @@ function wpmanualorders_order_product_meta_box_callback( $post ) {
 
 // Customer Meta Box Callback Output
 function wpmanualorders_order_customer_meta_box_callback( $post ) {
-    echo 'Select ordering customer';
-    $values = get_post_custom( $post->ID );
-    $customer_selected = isset( $values['wpmanualorders_order_customer_meta_box_customer_select'] ) ? esc_attr( $values['wpmanualorders_order_customer_meta_box_customer_select'][0] ) : '';
+	echo 'Select ordering customer';
+	$values = get_post_custom( $post->ID );
+	$customer_selected = isset( $values['wpmanualorders_order_customer_meta_box_customer_select'] ) ? esc_attr( $values['wpmanualorders_order_customer_meta_box_customer_select'][0] ) : '';
 
     // We'll use this nonce field later on when saving.
     wp_nonce_field( 'wpmanualorders_meta_box_nonce', 'meta_box_nonce' );
 
-    // The Query
-    $user_query = new WP_User_Query( array( 'role' => 'wpmanualorders_customer' ) );
-    ?> 
+	// The Query
+	?> 
     <p>
         <label for="wpmanualorders_order_customer_meta_box_customer_select">Customer</label>
-        <select name="wpmanualorders_order_customer_meta_box_customer_select" id="wpmanualorders_order_customer_meta_box_customer_select">
-            <option value="">Select</option>
-            <?php foreach ( $user_query->results as $user ) { ?>
-                <option value="<?php echo $user->user_login; ?>" <?php selected( $selected, $user->user_login ); ?>><?php echo $user->user_login; ?></option>
-            <?php } ?>    
-        </select>
+        <?php 
+        $args = array(
+            'role' => 'wpmanualorders_customer',
+        );
+        $users = get_users( $args );
+
+        if ($users) { ?>
+            <select name="wpmanualorders_order_customer_meta_box_customer_select" id="wpmanualorders_order_customer_meta_box_customer_select">
+                <option value="">Select Customer</option>
+                <?php foreach ($users as $user) {
+                    echo '<option value="' . $user->user_login . '"' . selected( $customer_selected, $user->user_login ) . '>' . $user->user_login .'</option>';
+                } ?>
+            </select>
+        <?php
+        }
+        ?>
     </p>
     <?php    
 }
