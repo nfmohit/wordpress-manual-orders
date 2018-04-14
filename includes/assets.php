@@ -8,13 +8,13 @@
  */
 
 // Admin Assets
-function wpmanualorders_enqueue_admin_assets() {
+function wpmo_enqueue_admin_assets() {
     wp_enqueue_style( 'plugin-admin-style',  plugin_dir_url(dirname(__FILE__)) . "assets/css/plugin-admin-style.css");
 }
-add_action( 'admin_print_styles', 'wpmanualorders_enqueue_admin_assets' );
+add_action( 'admin_print_styles', 'wpmo_enqueue_admin_assets' );
 
 // Front-end Assets
-function wpmanualorders_enqueue_front_assets() {
+function wpmo_enqueue_front_assets() {
     wp_enqueue_style( 'plugin-front-style',  plugin_dir_url(dirname(__FILE__)) . "assets/css/plugin-front-style.css");
 }
-add_action( 'wp_enqueue_scripts', 'wpmanualorders_enqueue_front_assets' );
+add_action( 'wp_enqueue_scripts', 'wpmo_enqueue_front_assets' );

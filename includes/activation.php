@@ -13,7 +13,7 @@
 
 // Customer
 add_role( 
-	'wpmanualorders_customer',
+	'wpmo_customer',
 	__( 'Customer', 'wp-manual-orders' ),
 	array(
 		'read' => true,
@@ -22,7 +22,7 @@ add_role(
 
 // Shop Administrator
 add_role(
-	'wpmanualorders_shop_admin',
+	'wpmo_shop_admin',
 	__( 'Shop Administrator', 'wp-manual-orders' ),
 	array(
 		'read' => true,
